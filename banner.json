@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-39-authenticated-telemetry",
+  "eyebrow": "PICOKIT // LESSON 39",
+  "title": "PICOKIT // AUTHENTICATED TELEMETRY",
+  "subtitle": "SEALED TELEMETRY + LOOPBACK VERIFY + FORGED-FRAME REJECT",
+  "accent": "#FF476D",
+  "dim": "#9E2C43",
+  "white": "#F3DCEA",
+  "cyan": "#7FD8E0",
+  "bg": "#110407",
+  "bg_edge": "#050102",
+  "icon": "shield",
+  "panel_status": "SEAL ok  ·  VERIFY ok  ·  FORGED reject",
+  "chips": [
+    {
+      "label": "AEAD",
+      "value": "XChaCha20"
+    },
+    {
+      "label": "KDF",
+      "value": "argon2id"
+    },
+    {
+      "label": "TAG",
+      "value": "poly1305"
+    },
+    {
+      "label": "RADIO",
+      "value": "-31 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00039  seq 21  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 21",
+    "[+] loopback seal ok  open ok  forged rejected",
+    "[+] verdict ok=1  rssi -31  snr 9.0"
+  ],
+  "categories": [
+    "SEAL",
+    "VERIFY",
+    "FORGE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "AT-01",
+      "label": "seal",
+      "value": "ok"
+    },
+    {
+      "tag": "AT-02",
+      "label": "verify",
+      "value": "ok"
+    },
+    {
+      "tag": "AT-03",
+      "label": "forged",
+      "value": "reject"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  SEAL  ·  VERIFY  ·  RADIO  ==[ AUTH ]=="
+  ],
+  "layout": "stat",
+  "stat": "SEALED"
+}
